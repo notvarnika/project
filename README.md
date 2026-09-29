@@ -1,4 +1,4 @@
-# UX / Management Application (Newcon2)
+# OngoingFullStack
 
 A full-stack enterprise web application featuring a **Spring Boot** REST API backend and a dynamic **React (Vite)** single-page frontend.
 
