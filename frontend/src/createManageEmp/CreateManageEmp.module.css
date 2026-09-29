@@ -1,0 +1,77 @@
+:root {
+  --erp-border: #8d9194;
+  --erp-text-dark: #3c3c3c;
+  --erp-label-blue: #1a4a75;
+}
+
+.erp-page-wrapper {
+  padding: 20px;
+  background-color: #ffffff;
+  color: var(--erp-text-dark);
+}
+
+.erp-form-card {
+  border: 1px solid var(--erp-border);
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 25px;
+}
+
+/* 3. Inline grid alignment for Form Row Groups */
+.erp-form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* Labels take exactly 30% width, styling matching your blue text links */
+.erp-form-group label {
+  width: 30%;
+  font-weight: bold;
+  color: var(--erp-label-blue);
+  font-size: 14px;
+  padding-right: 10px;
+  white-space: nowrap;
+}
+
+/* Inputs / Dropdowns take exactly 70% width */
+.erp-input.form-control,
+.erp-input.form-select {
+  width: 70%;
+  font-size: 14px;
+  padding: 6px 12px;
+  border: 1px solid var(--erp-border);
+  border-radius: 6px;
+  color: var(--erp-text-dark);
+  background-color: #ffffff;
+}
+
+/* Focused form inputs layout */
+.erp-input:focus {
+  border-color: var(--erp-text-dark);
+  box-shadow: none;
+  outline: none;
+}
+
+/* 4. Action button space alignment */
+.erp-btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.erp-btn {
+  background-color: #315a42; /* Clean dark forest green from screenshot */
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 6px 20px;
+  border: 1px solid #1e3b2b;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.erp-btn:hover {
+  background-color: #254432;
+}

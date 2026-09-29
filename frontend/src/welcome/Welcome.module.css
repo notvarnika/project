@@ -1,0 +1,78 @@
+/* Base / Light Mode Styles */
+.welcomeCard {
+  width: 100%;
+  max-width: 480px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 12px 16px;
+}
+
+.welcomeFieldset {
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  padding: 16px 24px;
+  margin: 0;
+}
+
+.welcomeLegend {
+  padding: 0 8px;
+  color: #16a085;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.welcomeName {
+  margin: 8px 0 24px 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #111111;
+  text-transform: uppercase;
+}
+
+.welcomeInfoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.welcomeLabel {
+  color: #333333;
+}
+
+.welcomeValue {
+  color: #222222;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   Dark Mode Overrides (Triggered by body.dark)
+   ========================================================================== */
+
+:global(body.dark) .welcomeCard {
+  background-color: #1a1f2c;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+:global(body.dark) .welcomeFieldset {
+  border-color: #2d3748;
+}
+
+:global(body.dark) .welcomeLegend {
+  color: #2dd4bf; /* Bright teal for dark backgrounds */
+}
+
+:global(body.dark) .welcomeName {
+  color: #ffffff;
+}
+
+:global(body.dark) .welcomeLabel {
+  color: #a0aec0;
+}
+
+:global(body.dark) .welcomeValue {
+  color: #e2e8f0;
+}

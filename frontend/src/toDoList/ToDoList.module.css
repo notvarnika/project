@@ -1,0 +1,178 @@
+/* Base / Light Mode Styles */
+.todoCard {
+  width: 100%;
+  max-width: 480px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 12px 16px;
+}
+
+.todoFieldset {
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  padding: 16px 20px;
+  margin: 0;
+}
+
+.todoLegend {
+  padding: 0 8px;
+  color: #16a085;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.todoForm {
+  display: flex;
+  gap: 8px;
+  margin: 8px 0 16px 0;
+}
+
+.todoInput {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.todoInput:focus {
+  border-color: #16a085;
+}
+
+.addButton {
+  background-color: #16a085;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.addButton:hover {
+  background-color: #138a72;
+}
+
+.taskList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.taskItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.taskItem:last-child {
+  border-bottom: none;
+}
+
+.taskLabel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.checkbox {
+  accent-color: #16a085;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.taskText {
+  font-size: 0.9rem;
+  color: #2d3748;
+  transition: color 0.2s ease;
+}
+
+.completed .taskText {
+  text-decoration: line-through;
+  color: #a0aec0;
+}
+
+.deleteButton {
+  background: none;
+  border: none;
+  color: #e53e3e;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  opacity: 0.7;
+}
+
+.deleteButton:hover {
+  opacity: 1;
+  background-color: #fff5f5;
+}
+
+.emptyState {
+  font-size: 0.85rem;
+  color: #718096;
+  font-style: italic;
+  margin-top: 8px;
+}
+
+/* ==========================================================================
+   Dark Mode Overrides (Triggered by body.dark)
+   ========================================================================== */
+
+:global(body.dark) .todoCard {
+  background-color: #1a1f2c;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+:global(body.dark) .todoFieldset {
+  border-color: #2d3748;
+}
+
+:global(body.dark) .todoLegend {
+  color: #2dd4bf;
+}
+
+:global(body.dark) .todoInput {
+  background-color: #2d3748;
+  border-color: #4a5568;
+  color: #ffffff;
+}
+
+:global(body.dark) .todoInput::placeholder {
+  color: #a0aec0;
+}
+
+:global(body.dark) .addButton {
+  background-color: #2dd4bf;
+  color: #1a1f2c;
+}
+
+:global(body.dark) .addButton:hover {
+  background-color: #26b8a5;
+}
+
+:global(body.dark) .taskItem {
+  border-bottom-color: #2d3748;
+}
+
+:global(body.dark) .taskText {
+  color: #e2e8f0;
+}
+
+:global(body.dark) .completed .taskText {
+  color: #718096;
+}
+
+:global(body.dark) .deleteButton:hover {
+  background-color: rgba(229, 62, 62, 0.2);
+}

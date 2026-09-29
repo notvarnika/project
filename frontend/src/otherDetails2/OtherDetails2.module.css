@@ -1,0 +1,94 @@
+/* Container for the form layout grid */
+.other-details2-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 40px;
+  row-gap: 20px;
+  padding: 10px 5px;
+}
+
+/* Individual rows containing label and select dropdowns */
+.other-details2-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Text label styles matching the unified dark blue color theme */
+.other-details2-label label {
+  width: 32%;
+  font-size: 13px;
+  font-weight: 600;
+  color: #2b4c7e;
+  text-transform: capitalize; /* Cleans up non-capitalized labels safely */
+}
+
+/* Dropdown styling */
+.form-select {
+  width: 65%;
+  padding: 8px 12px;
+  font-size: 13px;
+  color: #495057;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  background-color: #fff;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease-in-out;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 12px 12px;
+}
+
+/* Focus indicator states */
+.form-select:focus {
+  border-color: #17a2b8;
+  outline: 0;
+}
+/* ==========================================
+   RESPONSIVE DESIGN (Tablets and Mobile)
+   ========================================== */
+
+/* Tablet & Smaller Screens (e.g., ipads, smaller laptops) */
+@media (max-width: 992px) {
+  .other-details2-form,
+  .bank-details-form,
+  .pf-form,
+  .salary-structure-form {
+    column-gap: 20px; /* Reduces spacing between columns */
+  }
+}
+
+/* Mobile Screens (Phones) */
+@media (max-width: 768px) {
+  /* Collapse the 2-column grid into 1 single vertical column */
+  .other-details2-form,
+  .bank-details-form,
+  .pf-form,
+  .salary-structure-form {
+    grid-template-columns: 1fr;
+    row-gap: 15px;
+  }
+
+  /* Flip label/input wrappers from side-by-side (flex-row) to stacked vertically */
+  .other-details2-label,
+  .bank-details-label,
+  .pf-label,
+  .salary-label {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  /* Make both label and inputs stretch to full row width */
+  .other-details2-label label,
+  .bank-details-label label,
+  .pf-label label,
+  .salary-label label,
+  .form-control,
+  .form-input,
+  .form-select {
+    width: 100% !important;
+  }
+}

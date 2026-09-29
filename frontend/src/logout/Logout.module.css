@@ -1,0 +1,75 @@
+.logout-btn {
+  position: absolute;   
+  top: 20px;           
+  right: 20px;         
+  padding: 12px;
+  background-color: #646464;
+  color: var(--secondary);
+  border: 2px solid var(--primary);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 8px;   
+}
+
+.logout-btn:hover {
+  box-shadow: 4px 4px 0px var(--primary);
+  transform: translate(-2px, -2px);
+}
+
+
+/* Popup overlay also top-right */
+.logout-overlay-topright {
+  position: fixed;
+  top: 70px; /* below the logout button */
+  right: 20px;
+  z-index: 999;
+}
+
+/* Popup box */
+.logout-popup {
+  background-color: #ffffff;
+  border: 2px solid #646464;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: black;
+  text-align: center;
+  min-width: 220px;
+}
+
+/* Popup text */
+.logout-popup h2 {
+  color: #646464;
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Yes/No buttons */
+.logout-btn-yes,
+.logout-btn-no {
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  border: 2px solid var(--primary);
+  cursor: pointer;
+  margin: 5px;
+  transition: all 0.3s;
+}
+
+.logout-btn-yes {
+  background-color: #28a745; /* green */
+  color: var(--secondary);
+}
+
+.logout-btn-no {
+  background-color: #dc3545; /* red */
+  color: var(--secondary);
+}
+
+.logout-btn-yes:hover,
+.logout-btn-no:hover {
+  box-shadow: 4px 4px 0px var(--primary);
+  transform: translate(-2px, -2px);
+}

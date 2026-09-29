@@ -1,0 +1,132 @@
+/* Layout container for the grid */
+.personal-info-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 40px;
+  row-gap: 20px;
+  padding: 10px 5px;
+}
+
+/* Individual label/input row structures */
+.personal-info-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Form field label styles matching the main form color */
+.personal-info-label label {
+  width: 32%;
+  font-size: 13px;
+  font-weight: 600;
+  color: #2b4c7e; /* Matches the dark blue font in the screenshot */
+}
+
+/* Input boxes & Select boxes */
+.form-control,
+.form-select {
+  width: 65%;
+  padding: 8px 12px;
+  font-size: 13px;
+  color: #495057;
+  border: 1px solid #ced4da;
+  border-radius: 8px; /* Clean rounded edges matching the screenshot */
+  background-color: #fff;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease-in-out;
+}
+
+/* Standardize look across dropdown menus */
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 12px 12px;
+}
+
+/* Focus indicators */
+.form-control:focus,
+.form-select:focus {
+  border-color: #17a2b8;
+  outline: 0;
+}
+
+/* Webkit browser tweak for hiding numerical increment arrows on mobile fields */
+.form-control[type="number"]::-webkit-outer-spin-button,
+.form-control[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* =========================
+   Tablets (992px and below)
+========================= */
+@media (max-width: 992px) {
+  .personal-info-form {
+    column-gap: 20px;
+    row-gap: 16px;
+  }
+
+  .personal-info-label label {
+    width: 35%;
+    font-size: 12px;
+  }
+
+  .form-control,
+  .form-select {
+    width: 62%;
+    font-size: 12px;
+    padding: 7px 10px;
+  }
+}
+
+/* =========================
+   Mobile (768px and below)
+========================= */
+@media (max-width: 768px) {
+  .personal-info-form {
+    grid-template-columns: 1fr;
+    row-gap: 18px;
+    padding: 10px;
+  }
+
+  .personal-info-label {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .personal-info-label label {
+    width: 100%;
+    font-size: 13px;
+    margin-bottom: 2px;
+  }
+
+  .form-control,
+  .form-select {
+    width: 100%;
+    font-size: 13px;
+  }
+}
+
+/* =========================
+   Small Phones (480px and below)
+========================= */
+@media (max-width: 480px) {
+  .personal-info-form {
+    padding: 5px;
+    row-gap: 15px;
+  }
+
+  .personal-info-label label {
+    font-size: 12px;
+  }
+
+  .form-control,
+  .form-select {
+    padding: 8px;
+    font-size: 12px;
+    border-radius: 6px;
+  }
+}

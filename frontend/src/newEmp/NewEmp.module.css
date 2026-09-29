@@ -1,0 +1,287 @@
+/* Container layout */
+.full-body {
+  width: 95%;
+  max-width: 1400px;
+  margin: 20px auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.upper-form {
+  border: 1px solid #28a745;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.upper-form fieldset {
+  border: none;
+  margin: 0;
+  padding: 20px;
+}
+
+.upper-form legend {
+  float: left;
+  width: 120%;
+  padding: 8px 15px;
+  margin: -20px -20px 20px -20px;
+  background-color: #b5a442;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  grid-column: span 2;
+  clear: both;
+}
+
+.upper-form fieldset {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 40px;
+  row-gap: 15px;
+}
+
+.mb-3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-label {
+  width: 30%;
+  font-size: 13px;
+  font-weight: 600;
+  color: #2b4c7e;
+}
+.form-control {
+  width: 68%;
+  padding: 6px 12px;
+  font-size: 13px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: border-color 0.15s ease-in-out;
+}
+
+.mb-3 > div:not(:has(.select-label-empName)) {
+  width: 68%;
+}
+.mb-3 > div:not(:has(.select-label-empName)) .form-control {
+  width: 100%;
+}
+
+.form-control:focus {
+  border-color: #28a745;
+  outline: 0;
+}
+
+.mb-3:has(.select-label-empName) {
+  display: flex;
+  align-items: center;
+}
+
+.mb-3 > div:has(.select-label-empName) {
+  width: 20%;
+  margin-right: 2%;
+}
+
+.mb-3 > div:has(.select-label-empName) + div {
+  width: 46%;
+}
+
+.select-label-empName {
+  width: 100%;
+  padding: 6px;
+  font-size: 13px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.mb-3 > div:has(.select-label-empName) + div .form-control {
+  width: 100%;
+}
+
+.form-control:disabled {
+  background-color: #e9ecef;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+.nav-tab {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: -1px;
+}
+
+.tab {
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #114b3e;
+  border: 1px solid #0f4035;
+  border-radius: 6px 6px 0 0;
+  transition: all 0.2s ease;
+}
+
+.tab.active {
+  background-color: #ed8b23;
+  border-color: #ed8b23;
+  color: #fff;
+}
+
+.tab:hover:not(.active) {
+  background-color: #165e4e;
+}
+
+.tab-content {
+  border: 1px solid #17a2b8;
+  border-radius: 0 4px 4px 4px;
+  padding: 25px;
+  background-color: #fff;
+  min-height: 250px;
+}
+
+.lower-body {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.lower-body button {
+  padding: 8px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #21513e;
+  border: 1px solid #183c2e;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.15s ease;
+}
+
+.lower-body button:hover {
+  opacity: 0.9;
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .full-body {
+    width: 98%;
+    padding-top: 100px;
+  }
+
+  .upper-form fieldset {
+    padding-top: 200px;
+  }
+
+  .mb-3 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .form-label,
+  .form-control,
+  .select-label-empName,
+  .mb-3 > div:not(:has(.select-label-empName)),
+  .mb-3 > div:has(.select-label-empName),
+  .mb-3 > div:has(.select-label-empName) + div {
+    width: 100%;
+  }
+
+  .nav-tab {
+    justify-content: center;
+  }
+
+  .tab {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .upper-form fieldset {
+    padding: 70px 15px 15px;
+  }
+
+  .upper-form legend {
+    font-size: 13px;
+  }
+
+  .form-label {
+    font-size: 12px;
+  }
+
+  .form-control,
+  .select-label-empName {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .nav-tab {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+
+  .tab {
+    width: 100%;
+    border-radius: 6px;
+    font-size: 11px;
+    padding: 10px;
+  }
+
+  .tab-content {
+    padding: 15px;
+  }
+
+  .lower-body {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .lower-body button {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .full-body {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .upper-form fieldset {
+    padding: 60px 10px 10px;
+  }
+
+  .nav-tab {
+    grid-template-columns: 1fr;
+  }
+
+  .tab {
+    font-size: 10px;
+    padding: 10px;
+  }
+
+  .form-control,
+  .select-label-empName {
+    font-size: 11px;
+  }
+
+  .lower-body button {
+    font-size: 13px;
+    padding: 10px;
+  }
+}

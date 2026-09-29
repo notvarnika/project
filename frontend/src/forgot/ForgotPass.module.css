@@ -1,0 +1,98 @@
+:root {
+  --primary: #000000;
+  --secondary: #FFFFFF;
+  --accent: #FF5E5B;
+  --shadow: 8px 8px 0px var(--primary);
+}
+
+.forgot-pass-container {
+  flex: 1;
+  max-width: 900px;
+  border: 1px solid var(--primary);
+  padding: 40px 30px;
+  background-color: var(--secondary);
+  box-shadow: #8d9194;
+  border-radius: 12px;
+  text-align: center;
+  margin-left: 600px; /* space between image and form */
+}
+
+.forgot-pass-container::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: -6px;
+  bottom: -6px;
+  border: 1px solid var(--primary);
+  z-index: -1;
+  border-radius: 12px;
+}
+
+.forgot-pass-container h2 {
+  color: var(--primary);
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.forgot-pass-container p {
+  color: var(--primary);
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.forgot-pass-container input[type="email"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid var(--primary);
+  background-color: var(--secondary);
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s;
+  margin-bottom: 20px;
+}
+
+.forgot-pass-container input:focus {
+  box-shadow: 4px 4px 0px var(--primary);
+}
+
+.forgot-pass-button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--accent);
+  color: var(--secondary);
+  border: 2px solid var(--primary);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.forgot-pass-button:hover {
+  box-shadow: 4px 4px 0px var(--primary);
+  transform: translate(-2px, -2px);
+}
+
+.forgot-pass-image {
+  flex: 1;
+  background-image: url('login.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+}
+.forgot-pass-body {
+
+  background-image: url('login.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+
+  display: flex;
+  justify-content: center;   /* centers horizontally */
+  align-items: center;       /* centers vertically */
+  min-height: 100vh;         /* full viewport height */
+  padding: 20px;
+}

@@ -1,0 +1,99 @@
+/* Base / Light Mode Styles */
+.taskCard {
+  width: 100%;
+  max-width: 480px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 12px 16px;
+}
+
+.taskFieldset {
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  padding: 16px 20px;
+  margin: 0;
+}
+
+.taskLegend {
+  padding: 0 8px;
+  color: #16a085; /* Brand teal */
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.taskDescription {
+  font-size: 0.88rem;
+  color: #4a5568;
+  line-height: 1.5;
+  margin: 8px 0 16px 0;
+}
+
+.taskList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.taskItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #2d3748;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.taskItem:last-child {
+  border-bottom: none;
+}
+
+.taskDot {
+  width: 8px;
+  height: 8px;
+  background-color: #16a085;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.noTasks {
+  font-size: 0.85rem;
+  color: #718096;
+  font-style: italic;
+  margin-top: 8px;
+}
+
+/* ==========================================================================
+   Dark Mode Overrides (Triggered by body.dark)
+   ========================================================================== */
+
+:global(body.dark) .taskCard {
+  background-color: #1a1f2c;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+:global(body.dark) .taskFieldset {
+  border-color: #2d3748;
+}
+
+:global(body.dark) .taskLegend {
+  color: #2dd4bf;
+}
+
+:global(body.dark) .taskDescription {
+  color: #a0aec0;
+}
+
+:global(body.dark) .taskItem {
+  color: #e2e8f0;
+  border-bottom-color: #2d3748;
+}
+
+:global(body.dark) .taskDot {
+  background-color: #2dd4bf;
+}
+
+:global(body.dark) .noTasks {
+  color: #718096;
+}

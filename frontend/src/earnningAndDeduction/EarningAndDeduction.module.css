@@ -1,0 +1,124 @@
+/* Container framework replacing Bootstrap layout wrappers */
+.earning-deduction-container {
+  padding: 10px 5px;
+}
+
+.tables-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+  row-gap: 20px;
+  align-items: start;
+}
+
+/* Section Title layout */
+.table-title {
+  font-size: 14px;
+  color: #2b4c7e;
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Independent side-by-side tables setup */
+.table-wrapper {
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.table th,
+.table td {
+  padding: 8px 6px;
+  border-bottom: 1px solid #ced4da;
+  border-right: 1px solid #ced4da;
+  vertical-align: middle;
+}
+
+.table th:last-child,
+.table td:last-child {
+  border-right: none;
+}
+
+.table th {
+  background-color: #f8f9fa;
+  color: #2b4c7e;
+  font-weight: 600;
+  text-align: left;
+}
+
+/* Native inputs configuration */
+.form-control,
+.form-select {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 12px;
+  color: #495057;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 6px center;
+  background-size: 8px 8px;
+  padding-right: 18px;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #17a2b8;
+  outline: 0;
+}
+
+/* Helper Utilities */
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: #6c757d;
+}
+
+.py-4 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* Normalizes the number element inside the matrix */
+.form-control[type="number"]::-webkit-outer-spin-button,
+.form-control[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Mobile Viewports for Side-by-Side Tables */
+@media (max-width: 992px) {
+  /* Break the 2-column grid layout into individual vertical block rows */
+  .tables-grid {
+    grid-template-columns: 1fr;
+    row-gap: 25px;
+  }
+
+  /* Force the table container to enable responsive swipe-to-scroll naturally */
+  .table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Butter-smooth scrolling on iOS Safari */
+  }
+
+  /* Prevent standard form fields inside table columns from compressing out of view */
+  .table min-width-container {
+    min-width: 600px; /* Ensures columns maintain an readable shape */
+  }
+}

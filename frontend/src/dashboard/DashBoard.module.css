@@ -1,0 +1,37 @@
+/* Dashboard content grid */
+.dashbordContent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+  gap: 20px; /* Consistent spacing between cards */
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Make sure all cards stretch evenly in their grid slots */
+.dashbordContent > * {
+  width: 100%;
+}
+
+/* Layout container styling */
+.dashboardLayouts {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.menuButtonWrapper {
+  padding: 10px 20px;
+}
+
+.mainWorkspaceContent {
+  padding: 20px;
+}
+
+/* ==========================================================================
+   Responsive View (Single column on mobile)
+   ========================================================================== */
+@media (max-width: 850px) {
+  .dashbordContent {
+    grid-template-columns: 1fr;
+  }
+}

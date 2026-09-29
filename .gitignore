@@ -1,0 +1,78 @@
+# ==========================================
+# Root & General OS / Editor Files
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*.bak
+*.tmp
+*.log
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+
+# ==========================================
+# Frontend (React / Vite / Node.js)
+# ==========================================
+# Dependencies
+frontend/node_modules/
+frontend/.pnp
+frontend/.pnp.js
+
+# Build and Production Outputs
+frontend/dist/
+frontend/dist-ssr/
+frontend/build/
+
+# Vite Cache & Logs
+frontend/.vite/
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+
+# Environment Variables
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# Coverage & Testing
+frontend/coverage/
+
+# ==========================================
+# Backend (Spring Boot / Java / Maven)
+# ==========================================
+# Compiled Output & Build Directory
+backend/target/
+backend/*.jar
+backend/*.war
+
+# Eclipse / Spring Tool Suite Projects
+backend/.classpath
+backend/.project
+backend/.settings/
+backend/.factorypath
+backend/.springBeans
+
+# IntelliJ IDEA Projects
+backend/*.iml
+backend/*.iws
+backend/*.ipr
+backend/.idea/
+
+# Maven Wrapper Executables & Local Repo
+backend/.mvn/timing.properties
+backend/.mvn/wrapper/maven-wrapper.jar
+
+# Application Logs & Crash Dumps
+backend/*.log
+backend/hs_err_pid*

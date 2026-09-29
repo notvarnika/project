@@ -1,0 +1,272 @@
+/* Base / Light Mode Styles */
+.card {
+  width: 100%;
+  max-width: 480px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 12px 16px;
+}
+
+.fieldset {
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  padding: 16px 20px;
+  margin: 0;
+}
+
+.legend {
+  padding: 0 8px;
+  color: #16a085;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Tabs Header */
+.tabHeader {
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 14px;
+}
+
+.tabButton {
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #718096;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.activeTab {
+  color: #16a085;
+  border-bottom-color: #16a085;
+}
+
+/* Form Styling */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.fieldRow {
+  display: flex;
+  gap: 12px;
+}
+
+.fieldRow > .fieldGroup {
+  flex: 1;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  font-size: 0.88rem;
+  outline: none;
+  background-color: #ffffff;
+  color: #2d3748;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: #16a085;
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.actionContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+
+.submitButton {
+  background-color: #16a085;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submitButton:hover {
+  background-color: #138a72;
+}
+
+/* History / Status List Styling */
+.historyList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.historyItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background-color: #f8fafc;
+  border-radius: 6px;
+  border: 1px solid #edf2f7;
+}
+
+.historyMain {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.historyItemName {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.historyDetails {
+  font-size: 0.78rem;
+  color: #718096;
+}
+
+.historyMeta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.statusBadge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+
+.statusPending {
+  background-color: #feefc3;
+  color: #b45309;
+}
+
+.statusApproved {
+  background-color: #d1fae5;
+  color: #047857;
+}
+
+.statusRejected {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.historyDate {
+  font-size: 0.72rem;
+  color: #a0aec0;
+}
+
+.emptyState {
+  font-size: 0.85rem;
+  color: #718096;
+  font-style: italic;
+  text-align: center;
+  margin: 16px 0;
+}
+
+/* ==========================================================================
+   Dark Mode Overrides (Triggered by body.dark)
+   ========================================================================== */
+
+:global(body.dark) .card {
+  background-color: #1a1f2c;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+:global(body.dark) .fieldset {
+  border-color: #2d3748;
+}
+
+:global(body.dark) .legend {
+  color: #2dd4bf;
+}
+
+:global(body.dark) .tabHeader {
+  border-bottom-color: #2d3748;
+}
+
+:global(body.dark) .tabButton {
+  color: #a0aec0;
+}
+
+:global(body.dark) .activeTab {
+  color: #2dd4bf;
+  border-bottom-color: #2dd4bf;
+}
+
+:global(body.dark) .label {
+  color: #a0aec0;
+}
+
+:global(body.dark) .input,
+:global(body.dark) .textarea {
+  background-color: #2d3748;
+  border-color: #4a5568;
+  color: #ffffff;
+}
+
+:global(body.dark) .submitButton {
+  background-color: #2dd4bf;
+  color: #1a1f2c;
+}
+
+:global(body.dark) .historyItem {
+  background-color: #242b3d;
+  border-color: #2d3748;
+}
+
+:global(body.dark) .historyItemName {
+  color: #e2e8f0;
+}
+
+:global(body.dark) .historyDetails {
+  color: #a0aec0;
+}
+
+:global(body.dark) .statusPending {
+  background-color: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+}
+
+:global(body.dark) .statusApproved {
+  background-color: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+}
+
+:global(body.dark) .statusRejected {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+}

@@ -1,0 +1,80 @@
+/* Container sizing matching previous form component blocks */
+.profile-picture-container {
+  padding: 10px 5px;
+}
+
+/* Section heading color matching uniform dark blue setup */
+.title {
+  font-size: 14px;
+  color: #2b4c7e;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Horizontal flex-row structure to position label and upload bar */
+.profile-picture-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 50%; /* Since it's a single item, keeping it 50% matches the 2-column grid alignment width */
+}
+
+/* Bold layout labels */
+.profile-picture-form label {
+  width: 32%;
+  font-size: 13px;
+  font-weight: 600;
+  color: #2b4c7e;
+}
+
+/* Custom file input box layout */
+.form-control {
+  width: 65%;
+  font-size: 13px;
+  color: #495057;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  background-color: #fff;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease-in-out;
+}
+
+/* Target native file button pseudo-element for custom look */
+.form-control::file-selector-button {
+  padding: 8px 12px;
+  margin-right: 12px;
+  border: none;
+  border-right: 1px solid #ced4da;
+  background-color: #f8f9fa;
+  color: #495057;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.form-control::file-selector-button:hover {
+  background-color: #e2e6ea;
+}
+
+.form-control:focus {
+  border-color: #17a2b8;
+  outline: 0;
+}
+
+/* Mobile Viewports for Profile Input */
+@media (max-width: 768px) {
+  /* Let container grow past 50% to maximize screen space */
+  .profile-picture-form {
+    max-width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  /* Force elements to behave nicely as standalone row blocks */
+  .profile-picture-form label,
+  .form-control {
+    width: 100%;
+  }
+}
